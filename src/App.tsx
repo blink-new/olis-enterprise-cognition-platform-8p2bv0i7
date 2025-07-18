@@ -10,6 +10,7 @@ import ValidationFlow from './pages/ValidationFlow';
 import FederatedLearning from './pages/FederatedLearning';
 import SurfacingLogic from './pages/SurfacingLogic';
 import TechnicalBlueprint from './pages/TechnicalBlueprint';
+import InteractiveDemo from './pages/InteractiveDemo';
 import Navigation from './components/Navigation';
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
         <main className="pt-16">
           <Routes>
             <Route path="/" element={<TechnicalBlueprint />} />
+            <Route path="/demo" element={<InteractiveDemo />} />
             <Route path="/architecture" element={<SystemArchitecture />} />
             <Route path="/document-ingestion" element={<DocumentIngestion />} />
             <Route path="/memory-schema" element={<MemorySchema />} />

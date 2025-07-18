@@ -23,7 +23,7 @@ export default function TechnicalBlueprint() {
       {/* Hero Section */}
       <div className="text-center mb-12">
         <div className="flex items-center justify-center space-x-3 mb-4">
-          <Brain className="h-12 w-12 text-blue-600" />
+          <Brain className="h-12 w-12 text-blue-600 animate-pulse" />
           <h1 className="text-4xl font-bold text-slate-900">Olis Technical Blueprint</h1>
         </div>
         <p className="text-xl text-slate-600 max-w-4xl mx-auto">
@@ -31,10 +31,30 @@ export default function TechnicalBlueprint() {
           real-time, human-verified operational knowledge within enterprise environments.
         </p>
         <div className="flex items-center justify-center space-x-4 mt-6">
-          <Badge variant="outline" className="text-blue-600 border-blue-200">AI-Native</Badge>
-          <Badge variant="outline" className="text-green-600 border-green-200">Private Deployed</Badge>
-          <Badge variant="outline" className="text-purple-600 border-purple-200">SOC2 Compliant</Badge>
-          <Badge variant="outline" className="text-orange-600 border-orange-200">Human-in-the-Loop</Badge>
+          <Badge variant="outline" className="text-blue-600 border-blue-200 hover:bg-blue-50 transition-colors">AI-Native</Badge>
+          <Badge variant="outline" className="text-green-600 border-green-200 hover:bg-green-50 transition-colors">Private Deployed</Badge>
+          <Badge variant="outline" className="text-purple-600 border-purple-200 hover:bg-purple-50 transition-colors">SOC2 Compliant</Badge>
+          <Badge variant="outline" className="text-orange-600 border-orange-200 hover:bg-orange-50 transition-colors">Human-in-the-Loop</Badge>
+        </div>
+        
+        {/* Quick Stats */}
+        <div className="grid md:grid-cols-4 gap-4 mt-8 max-w-4xl mx-auto">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-lg">
+            <div className="text-2xl font-bold text-blue-600">10K+</div>
+            <div className="text-sm text-blue-700">Documents/Hour</div>
+          </div>
+          <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-lg">
+            <div className="text-2xl font-bold text-green-600">&lt;100ms</div>
+            <div className="text-sm text-green-700">Memory Surfacing</div>
+          </div>
+          <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-4 rounded-lg">
+            <div className="text-2xl font-bold text-purple-600">99.9%</div>
+            <div className="text-sm text-purple-700">Uptime SLA</div>
+          </div>
+          <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-4 rounded-lg">
+            <div className="text-2xl font-bold text-orange-600">Zero</div>
+            <div className="text-sm text-orange-700">Data Egress</div>
+          </div>
         </div>
       </div>
 

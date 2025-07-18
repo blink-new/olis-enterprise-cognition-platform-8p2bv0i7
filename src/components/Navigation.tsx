@@ -10,11 +10,13 @@ import {
   Network, 
   Zap,
   FileText,
-  Upload
+  Upload,
+  Sparkles
 } from 'lucide-react';
 
 const navigationItems = [
   { path: '/', label: 'Technical Blueprint', icon: FileText },
+  { path: '/demo', label: 'Interactive Demo', icon: Sparkles },
   { path: '/architecture', label: 'System Architecture', icon: Network },
   { path: '/document-ingestion', label: 'Document Ingestion', icon: Upload },
   { path: '/memory-schema', label: 'Memory Schema', icon: Database },
@@ -38,7 +40,7 @@ export default function Navigation() {
             <span className="text-sm text-slate-400">Enterprise Cognition Infrastructure</span>
           </div>
           
-          <div className="flex items-center space-x-1">
+          <div className="flex items-center space-x-1 overflow-x-auto">
             {navigationItems.map((item) => {
               const Icon = item.icon;
               const isActive = location.pathname === item.path;
@@ -48,10 +50,10 @@ export default function Navigation() {
                   key={item.path}
                   to={item.path}
                   className={cn(
-                    "flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors",
+                    "flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap",
                     isActive
-                      ? "bg-blue-600 text-white"
-                      : "text-slate-300 hover:text-white hover:bg-slate-800"
+                      ? "bg-blue-600 text-white shadow-lg transform scale-105"
+                      : "text-slate-300 hover:text-white hover:bg-slate-800 hover:scale-105"
                   )}
                 >
                   <Icon className="h-4 w-4" />
